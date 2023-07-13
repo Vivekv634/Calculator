@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="calculator">
+            <div>
+                <div><input type="text" id="screen"></div>
+            </div>
+            <div class="button-row">
+                <div><input type="button" id="c" value="C" onclick="clr()"></div>
+                <div><input type="button" id="bracket" value="(" onclick="display('(')" onkeydown="keyboardListener(event)"></div>
+                <div><input type="button" id="bracket" value=")" onclick="display(')')" onkeydown="keyboardListener(event)"></div>
+                <div><input type="button" value="&div;" onclick="display('/')"></div>
+            </div>
+            <div class="button-row">
+                <div><input type="button" value="7" onclick="display('7')" onkeydown="keyboardListener(event)"></div>
+                <div><input type="button" value="8" onclick="display('8')" onkeydown="keyboardListener(event)"></div>
+                <div><input type="button" value="9" onclick="display('9')" onkeydown="keyboardListener(event)"></div>
+                <div><input type="button" value="&Cross;" onclick="display('*')"></div>
+            </div>
+            <div class="button-row">
+                <div><input type="button" value="4" onclick="display('4')" onkeydown="keyboardListener(event)"></div>
+                <div><input type="button" value="5" onclick="display('5')" onkeydown="keyboardListener(event)"></div>
+                <div><input type="button" value="6" onclick="display('6')" onkeydown="keyboardListener(event)"></div>
+                <div><input type="button" value="-" onclick="display('-')" onkeydown="keyboardListener(event)"></div>
+            </div>
+            <div class="button-row">
+                <div><input type="button" value="1" onclick="display('1')" onkeydown="keyboardListener(event)"></div>
+                <div><input type="button" value="2" onclick="display('2')" onkeydown="keyboardListener(event)"></div>
+                <div><input type="button" value="3" onclick="display('3')" onkeydown="keyboardListener(event)"></div>
+                <div><input type="button" value="+" onclick="display('+')" onkeydown="keyboardListener(event)"></div>
+            </div>
+            <div class="button-row">
+                <div><input type="button" id="c" value="&LeftArrow;" onclick="backspace()"></div>
+                <div><input type="button" value="0" onclick="display('0')" onkeydown="keyboardListener(event)"></div>
+                <div><input type="button" value="." onclick="display('.')" onkeydown="keyboardListener(event)"></div>
+                <div><input type="button" id="result" value="=" onclick="solve()"></div>
+            </div>
+        </div>
+    </div><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
